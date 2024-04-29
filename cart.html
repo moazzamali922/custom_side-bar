@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Menu | Side Navigation Bar</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<style>
+    .container {
+        max-width: 90%;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .shopping-cart-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        gap: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #ddd;
+    }
+
+    th {
+        height: 50px;
+        background-color: #d5e7e6;
+        color: #333;
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+        padding: 35px;
+    }
+
+    img {
+        width: 80px;
+    }
+
+    .btn {
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .increment-btn,
+    .decrement-btn {
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .increment-btn {
+        background-color: #28a745;
+        padding: 8px 15px;
+    }
+
+    .decrement-btn {
+        background-color: #dc3545;
+        padding: 8px 15px; 
+    }
+
+    .clear-cart-btn {
+        padding: 5px 10px;
+        background-color: #28a745;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border: none;
+        border-radius: 5px;
+    }
+    .input_count {
+    width: 40px; /* Set the width to 40px */
+    text-align: center;
+    padding: 6px 4px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+</style>
+
+
+<body>
+    <div class="container">
+        <div class="shopping-cart-header">
+            <h4>SHOPPING CART</h4>
+            <h4>CHECKOUT</h4>
+            <h4>PAYMENT</h4>
+            
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product Details</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Sub Total</th>
+                    <th><button class="clear-cart-btn">Clear Cart</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="mobile.jpg" alt="Bike"></td>
+                    <td>Suzuki Intruder M1800R</td>
+                    <td>£85</td>
+                    <td>
+                        <button class="btn decrement-btn">-</button>
+                        <input class="input_count" type="text" value="1">
+                        <button class="btn increment-btn">+</button>
+                    </td>
+                    <td>£85</td>
+                    <td><i class="fas menu-icon fa-times close-icon"></i></td>
+                </tr>
+                <tr>
+                    <td><img src="mobile.jpg" alt="Bike"></td>
+                    <td>Suzuki NEX Crossover</td>
+                    <td>£52</td>
+                    <td>
+                        <button class="btn decrement-btn">-</button>
+                        <input class="input_count" type="text" value="1">
+                        <button class="btn increment-btn">+</button>
+                    </td>
+                    <td>£52</td>
+                    <td><i class="fas menu-icon fa-times close-icon"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
